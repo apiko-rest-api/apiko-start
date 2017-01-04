@@ -1,0 +1,17 @@
+{
+  "name": "my-apiko-server",
+  "version": "0.1.0",
+  "description": "My Apiko server.",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "dev": "node main.js dev",
+    "prod": "node main.js prod"
+  },
+  "dependencies": {
+    "apiko": "^0.1.0"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}
