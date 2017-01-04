@@ -2,19 +2,19 @@ var Apiko = require('apiko')
 
 // A little setup:
 
-Apiko.config.port = 5000
+var config {
+  port: 5000
+}
+
+// You can also have your config in a separate file, see config.js.
 
 if (process.argv[2] === 'prod') {
 }
 
 if (process.argv[2] === 'dev') {
-  Apiko.config.maintainBrowserTab = true,
-  Apiko.config.verbose = true
+  config.maintainBrowserTab = true,
+  config.verbose = true
 }
-
-// Need a custom run environment?
-// if (process.argv[2] === 'yourOwnEnv') { ... }
-// npm run yourOwnEnv
 
 // Your custom request processing:
 
@@ -50,7 +50,7 @@ Apiko.on('/collection/action', (params, request, store) => {
 })
 
 Apiko.on('/justaction', (params, request, store) => {
-  // You can define any custom endpoints addresses.
+  // You can define any custom endpoint addresses.
 
   // You probably also want to work with data, you can access any data collection
   // using the store argument with collection names as you can see them in Apiko GUI:
@@ -63,4 +63,4 @@ Apiko.on('/justaction', (params, request, store) => {
 Apiko.on('/custom/action', require('./custom/action'))
 
 // Let Apiko run this for you:
-Apiko.run()
+Apiko.run(config)
