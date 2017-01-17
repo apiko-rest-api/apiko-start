@@ -31,16 +31,14 @@ Apiko.on('GET /collection/action', (request, store) => {
   // Request parameters are stored in the request.params property and are
   // never validated. You have to validate them here.
 
-  if ((request.method == 'GET') || (request.method == 'POST')) {
-    if (request.params.foo) {
-    // In order to respond to the client, you need to call:
-      request.respondSuccess({any: 'data'}) // 200 OK
-    } else {
-    // If you are not happy, you can respond with an error:
-      request.respondError(400, 'Custom message', 76)
-      // args: HTTP status code, custom message, custom error code, all optional
-      // custom error codes should be > 100
-    }
+  if (request.params.foo) {
+  // In order to respond to the client, you need to call:
+    request.respondSuccess({any: 'data'}) // 200 OK
+  } else {
+  // If you are not happy, you can respond with an error:
+    request.respondError(400, 'Custom message', 76)
+    // args: HTTP status code, custom message, custom error code, all optional
+    // custom error codes should be > 100
   }
 
   // CASE 2: the specified (URL) endpoint is defined in Apiko GUI
