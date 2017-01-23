@@ -1,3 +1,3 @@
-module.exports = function (request, store) {
-  request.respondWithSuccess({hello: 'world'})
+module.exports = function (req, res, next) {
+  request.success({hello: 'world'})
 }

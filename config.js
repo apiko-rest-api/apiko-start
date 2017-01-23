@@ -24,7 +24,6 @@ if (process.argv[2] === 'prod') {
 }
 
 if (process.argv[2] === 'dev') {
-  config.maintainBrowserTab = true,
   config.verbosity = 2 // 0 - 3
 }
 
