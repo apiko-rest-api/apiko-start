@@ -2,7 +2,7 @@ var Apiko = require('apiko')
 
 // A little setup:
 
-var config {
+var config = {
   port: 5000,
   // prefix: 'api' // will prepend URLs with /api, e.g.: /api/users, no prefix by default
 }

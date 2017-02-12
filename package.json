@@ -9,7 +9,7 @@
     "prod": "node main.js prod"
   },
   "dependencies": {
-    "apiko": "^0.1.0"
+    "apiko": "^0.2.0"
   },
   "devDependencies": {},
   "author": "",
